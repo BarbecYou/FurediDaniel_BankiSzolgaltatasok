@@ -6,7 +6,6 @@ public abstract class Szamla extends BankiSzolgaltatas {
 
     public Szamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
-        this.aktualisEgyenleg = 0;
     }
 
     public int getAktualisEgyenleg() {
@@ -15,13 +14,8 @@ public abstract class Szamla extends BankiSzolgaltatas {
     public void befizet(int osszeg){
         aktualisEgyenleg += osszeg;
     }
-    public boolean kivesz(int osszeg){
-        if (osszeg > aktualisEgyenleg){
-            return false;
-        }
-        aktualisEgyenleg -= osszeg;
-        return true;
-    }
+    public abstract boolean kivesz(int osszeg);
+
     public Kartya ujKartya(String kartyaszam){
         return new Kartya(this.getTulajdonos(), this, kartyaszam);
     }
