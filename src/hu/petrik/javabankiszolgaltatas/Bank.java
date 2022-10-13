@@ -34,5 +34,13 @@ public class Bank {
         }
         return tempSzamla;
     }
-
+    public long getOsszHitelKeret(){
+        long osszHitelKeret = 0;
+        for (Szamla sz : szamlaLista){
+            if (sz.getClass() == HitelSzamla.class){
+                osszHitelKeret += ((HitelSzamla) sz).getHitelKeret();
+            }
+        }
+        return osszHitelKeret;
+    }
 }
