@@ -15,6 +15,10 @@ public abstract class Szamla extends BankiSzolgaltatas {
         aktualisEgyenleg += osszeg;
     }
     public boolean kivesz(int osszeg){
+        if (osszeg > aktualisEgyenleg){
+            return false;
+        }
+        aktualisEgyenleg -= osszeg;
         return true;
     }
 
