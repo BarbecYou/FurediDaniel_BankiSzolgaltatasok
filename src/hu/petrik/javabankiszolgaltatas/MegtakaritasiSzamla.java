@@ -3,7 +3,7 @@ package hu.petrik.javabankiszolgaltatas;
 public class MegtakaritasiSzamla extends Szamla{
 
     private double kamat;
-    private static final double alapKamat = 1.1;
+    public static final double alapKamat = 1.1;
 
     public MegtakaritasiSzamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
