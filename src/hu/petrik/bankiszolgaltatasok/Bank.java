@@ -1,7 +1,6 @@
-package hu.petrik.javabankiszolgaltatas;
+package hu.petrik.bankiszolgaltatasok;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Bank {
@@ -34,7 +33,7 @@ public class Bank {
         }
         return tempSzamla;
     }
-    public long getOsszHitelKeret(){
+    public long getOsszHitelkeret(){
         long osszHitelKeret = 0;
         for (Szamla sz : szamlaLista){
             if (sz.getClass() == HitelSzamla.class){

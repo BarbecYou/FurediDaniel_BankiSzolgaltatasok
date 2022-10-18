@@ -1,4 +1,4 @@
-package hu.petrik.javabankiszolgaltatas;
+package hu.petrik.bankiszolgaltatasok;
 
 public class MegtakaritasiSzamla extends Szamla{
 

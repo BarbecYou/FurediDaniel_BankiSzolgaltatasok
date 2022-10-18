@@ -1,4 +1,4 @@
-package hu.petrik.javabankiszolgaltatas;
+package hu.petrik.bankiszolgaltatasok;
 
 public class HitelSzamla extends Szamla {
 
@@ -14,10 +14,10 @@ public class HitelSzamla extends Szamla {
     }
 
     public boolean kivesz(int osszeg){
-        if (osszeg + hitelKeret < super.aktualisEgyenleg){
-            return false;
+        if (osszeg <= hitelKeret + aktualisEgyenleg){
+            super.aktualisEgyenleg -= osszeg;
+            return true;
         }
-        super.aktualisEgyenleg -= osszeg;
-        return true;
+        return false;
     }
 }

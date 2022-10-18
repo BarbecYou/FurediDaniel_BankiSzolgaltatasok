@@ -1,8 +1,8 @@
-package hu.petrik.javabankiszolgaltatas;
+package hu.petrik.bankiszolgaltatasok;
 
 public class Kartya extends BankiSzolgaltatas{
 
-    private Szamla szamla;
+    public Szamla szamla;
     private String kartyaSzam;
 
     public Kartya(Tulajdonos tulajdonos, Szamla szamla, String kartyaSzam) {
@@ -16,8 +16,7 @@ public class Kartya extends BankiSzolgaltatas{
     }
 
     public boolean vasarlas(int osszeg){
-        if (szamla.kivesz(osszeg)){
-            szamla.aktualisEgyenleg -= osszeg;
+        if (this.szamla.kivesz(osszeg)){
             return true;
         }
         return false;
